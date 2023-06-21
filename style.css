@@ -18,7 +18,7 @@ body {
 #button-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-gap: 5px;
+  /* grid-gap: 5px; */
 }
 
 .title {
@@ -32,13 +32,16 @@ body {
 .btn {
   background: #66dbd7;
   color: #fff;
-  margin: 1rem;
+  margin: 0.8rem;
   /* padding: 0rem 1rem; */
   border-radius: 0.4rem;
   border: none;
   cursor: pointer;
   font-size: 2rem;
   font-family: inherit;
+}
+.small-number {
+  font-size: 1rem; /* adjust the font size for numbers inside parentheses */
 }
 
 .btn:hover {

@@ -7,7 +7,6 @@ function generateButtons() {
     button.className = 'dice-number btn button' + i;
     buttonContainer.appendChild(button);
 
-    var initialCount = localStorage.getItem(i) || 0; // Get the initial count from local storage
     button.addEventListener(
       'click',
       function (i, buttonElement) {
@@ -34,7 +33,8 @@ function renderCounts() {
     var buttonValue = parseInt(button.innerHTML, 10);
     var count = parseInt(localStorage.getItem(buttonValue), 10) || 0; // Get the count from local storage
 
-    button.innerHTML = buttonValue + ' (' + count + ')'; // Update the button label with the count
+    button.innerHTML = buttonValue + ' ' + `<span class="small-number">(${count})</span>` ; // Update the button label with the count
+    
   }
 }
 
